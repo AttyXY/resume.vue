@@ -1,28 +1,55 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
-  </div>
+    <div id="app">
+        <Resume :data="data" />
+    </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import Resume from "./Resume";
 
 export default {
-  name: "app",
-  components: {
-    HelloWorld
-  }
+    name: "app",
+    components: {
+        Resume,
+    },
 };
 </script>
 
-<style>
+<style lang="scss">
+@import "./mixins.scss";
+
 #app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    // Enable box sizing
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    // Contrasting background
+    background-color: lightgrey;
+    margin: 0;
+
+    /* Global styling for resume */
+    font-family: $font-family;
+
+    // Normalize spacing around text.
+    // prettier-ignore
+    p, h1, h2, h3, h4, h5 {
+        margin: 0;
+        padding: 0;
+    }
+
+    // Keep #app centered.
+    // prettier-ignore
+    > #app { margin: 0 auto; }
+}
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
 }
 </style>

@@ -1,0 +1,76 @@
+{
+    "header": {
+        "about": {
+            "name": "Atticus Yang",
+            "blurb": "smol boi big dicc"
+        },
+        "contact": [
+            {
+                "url": "atticus.yang@uwaterloo.ca",
+                "icon": "fas fa-envelope",
+                "newtab": false
+            },
+            {
+                "url": "linkedin.com/in/atticus-yang",
+                "icon": "fab fa-linkedin"
+            },
+            {
+                "url": "github.com/attyxy",
+                "icon": "fab fa-github"
+            },
+            {
+                "url": "attyxy.me",
+                "icon": "fas fa-child"
+            }
+        ]
+    },
+    "experience": [
+        {
+            "role": {
+                "title": "Full-stack Developer",
+                "date": "Sept-Dev 2019",
+                "company": "Wawanesa Insurance",
+                "team": "Innovation Team",
+                "location": "Waterloo, ON"
+            },
+            "bullets": ["ate ass", "ate more ass"]
+        },
+        {
+            "role": {
+                "title": "Data Science Intern",
+                "date": "Jan-Apr 2019",
+                "company": "Northbridge Insurance",
+                "team": "Business Analytics Team",
+                "location": "Toronto, ON"
+            },
+            "bullets": ["ate ass", "ate more ass"]
+        }
+    ],
+    "sidebar": {
+        "skills": {
+            "languages": ["Python", "R", "SQL", "Bash"],
+            "libraries": ["react.js", "vue.js"],
+            "technologies": ["AWS", "GCP"]
+        },
+        "projects": [
+            {
+                "name": "bedbugs-begone",
+                "url": "github.com/attyxy/bedbugs-begone",
+                "blurb": "bedbug or not?"
+            },
+            {
+                "name": "personal-site",
+                "url": "github.com/attyxy/attyxy.github.io",
+                "blurb": "self-explanatory"
+            }
+        ],
+        "education": [
+            {
+                "degree": "Bachelor of Compouter Science",
+                "institution": "University of Waterloo",
+                "year": "2017 - 2022",
+                "extras": ["Cognitive Science Minor"]
+            }
+        ]
+    }
+}
