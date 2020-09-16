@@ -9,23 +9,26 @@
 </template>
 
 <script>
+import _ from "lodash";
 import Experience from "./components/Experience";
 import Header from "./components/Header";
 import Sidebar from "./components/Sidebar";
 
 export default {
     name: "resume",
-    data: () => ({ data: {} }),
-    // Fetch JSON data upon creation.
-    created: function() {
-        fetch("data.json")
-            .then(res => res.json())
-            .then(data => (this.data = data));
+    props: {
+        data: { type: Object, required: true },
     },
     computed: {
-        headerData: () => this.data.header,
-        experienceData: () => this.data.experience,
-        sidebarData: () => this.data.sidebar,
+        headerData: function() {
+            return _.pick(this.data.header, ["about", "contacts"]);
+        },
+        experienceData: function() {
+            return this.data.experience;
+        },
+        sidebarData: function() {
+            return this.data.sidebar;
+        },
     },
     components: {
         ResumeHeader: Header,
@@ -36,20 +39,22 @@ export default {
 </script>
 
 <style lang="scss">
+/* Global layout grid */
 .resume {
-    display: flex;
-    flex-direction: column;
-
     // set to Letter paper size
     width: 8.5in;
     height: 11in;
-}
-.resume-header {
-    display: flex;
-    flex-direction: row;
 
+    display: flex;
+    flex-direction: column;
+}
+
+.resume-header {
     height: 12.5vh; // 1/8 height
     flex: 0 1 auto;
+
+    display: flex;
+    flex-direction: row;
 }
 
 .content {
@@ -63,12 +68,10 @@ export default {
     }
 }
 
-.experience {
+.experience-container {
     width: calc(100vw - 300px);
-    flex: 0 1 auto;
 }
-.sidebar {
-    width: 400px;
-    flex: 0 1 auto;
+.sidebar-container {
+    width: 300px;
 }
 </style>

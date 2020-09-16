@@ -1,12 +1,39 @@
 <template>
-    <div class="experience">
+    <div class="experience-container">
         <h1 class="subheader">EXPERIENCE</h1>
+        <div class="experience">
+            <div v-for="(experience, i) in data" :key="i">
+                <div class="role">
+                    <div class="company">
+                        <h2 class="title">{{ experience.role.title }}</h2>
+                        <h2 class="company">{{ experience.role.company }}</h2>
+                    </div>
+                    <div class="metadata">
+                        <h2 class="date">{{ experience.role.date }}</h2>
+                        <h2 class="location">{{ experience.role.location }}</h2>
+                    </div>
+                </div>
+                <ul class="bullets">
+                    <!-- <li v-for="(point, j) in points[i]" :key="j" v-html="point" /> -->
+                    <li
+                        v-for="(bullet, j) in experience.bullets"
+                        :key="j"
+                        v-html="bullet"
+                    >
+                        {{ bullet }}
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
 </template>
 
 <script>
 export default {
     name: "experience",
+    props: {
+        data: { type: Array, default: () => [] },
+    },
     components: {},
 };
 </script>
@@ -14,10 +41,41 @@ export default {
 <style lang="scss">
 @import "../mixins.scss";
 
-.experience {
+.experience-container {
     padding: 30px;
     background-color: white;
-    color: $highlight;
-    font-size: $subheader-font-size;
+    h1 {
+        font-weight: normal;
+        font-size: 14pt;
+        color: $highlight;
+    }
+    div {
+        font-size: 7pt;
+        h2 {
+            .title .date {
+                font-weight: normal;
+            }
+        }
+    }
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+}
+.role {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .company {
+        display: flex;
+        flex-direction: column;
+    }
+    .metadata {
+        display: flex;
+        flex-direction: column;
+    }
+    /* width: (100vw - 300px */
 }
 </style>

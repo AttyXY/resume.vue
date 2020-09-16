@@ -4,7 +4,7 @@
             "name": "Atticus Yang",
             "blurb": "smol boi big dicc"
         },
-        "contact": [
+        "contacts": [
             {
                 "url": "atticus.yang@uwaterloo.ca",
                 "icon": "fas fa-envelope",
@@ -28,22 +28,46 @@
         {
             "role": {
                 "title": "Full-stack Developer",
-                "date": "Sept-Dev 2019",
+                "date": "Sept -> Dev 2019",
                 "company": "Wawanesa Insurance",
                 "team": "Innovation Team",
                 "location": "Waterloo, ON"
             },
-            "bullets": ["ate ass", "ate more ass"]
+            "bullets": [
+                "Implemented extreme weather alert service, by creating microservices to get updates from RSS feeds and send SMS messages to subscribed users (API gateway, Lambda, DynamoDB, SNS)",
+                "Developed app to automate claims document processing: Built frontend and backend auth, and document upload/download features (Cognito, S3, React) Setup frontend CI/CD (Amplify). Designed and implemented API to integrate with third-party insurtech service",
+                "Created Twitter scraper, sentiment analysis microservices, and dashboard for real-time business campaign monitoring prototype (Node.js, Comprehend, React)",
+                "Created internal project template for Firebase, React projects involving auth and storage (Terraform)"
+            ]
         },
         {
             "role": {
                 "title": "Data Science Intern",
-                "date": "Jan-Apr 2019",
+                "date": "Jan -> Apr 2019",
                 "company": "Northbridge Insurance",
                 "team": "Business Analytics Team",
                 "location": "Toronto, ON"
             },
-            "bullets": ["ate ass", "ate more ass"]
+            "bullets": [
+                "Improved top vehicle loss detection model, saving 2M+ annually on Ontario risk sharing pool (dask, scikit-learn, seaborn)",
+                "Collected, cleaned, and analyzed internal company and census data to build proof-of-concept fraud detection model (tidyverse, ggplot2)",
+                "Automated and migrated deployment and monitoring of property fire risk assessment model to new internal cloud environment (PySpark)",
+                "Co-hosted intro to machine learning think tank with internal and external business stakeholders to generate buy-in and new project proposals"
+            ]
+        },
+        {
+            "role": {
+                "title": "Data Engineering Intern",
+                "date": "May -> Aug 2019",
+                "company": "Zenith Insurance",
+                "team": "IT Data Team",
+                "location": "Los Angeles, CA"
+            },
+            "bullets": [
+                "Archived inactive claims data in in-house Oracle data warehouse, improved ETL and query speed by 40% (Python, bash, SQL)",
+                "Coordinated with business intelligence and reporting teams, to create scripts to mask all personally identifying information in non-prod environments (Python, bash, SQL)",
+                "Created internal tool to automate monitoring of daily ETL regression testing, saving 1h/day per DB admin (Flask, Vue, SQL)"
+            ]
         }
     ],
     "sidebar": {
