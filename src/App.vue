@@ -14,9 +14,7 @@ export default {
     created: function() {
         fetch("data.json")
             .then(res => res.json())
-            // .then(data => console.log(data))
-            .then(data => (this.data = data))
-            .catch(e => console.log(e));
+            .then(data => (this.data = data));
     },
     components: {
         Resume,
@@ -28,13 +26,10 @@ export default {
 @import "./mixins.scss";
 
 body {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-
     // Enable box sizing
+    box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
-    box-sizing: border-box;
     *,
     *:before,
     *:after {
@@ -43,12 +38,23 @@ body {
         box-sizing: inherit;
     }
 
+    // Avoid overflow font
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    -ms-text-size-adjust: none;
+
+    // Keep #app centred
+    // prettier-ignore
+    > #app { margin: 0 auto; }
+
     // Contrasting background
-    background-color: lightgrey;
     margin: 0;
+    background-color: lightgrey;
 
     /* Global styling defaults */
     font-family: $font-family;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 
     // prettier-ignore
     p, h1, h2, h3, h4, h5, h6 {

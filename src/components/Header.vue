@@ -42,7 +42,7 @@ export default {
         90%,
         rgb(77, 76, 76)
     );
-    padding: 30px;
+    padding: $border-padding;
     color: $highlight-dark;
     font-size: $header-font-size;
 }
@@ -69,7 +69,7 @@ export default {
         }
         & i {
             /* background-image: -webkit-linear-gradient(#9c47fc, #356ad2); */
-            padding: 0 5px;
+            padding: 0 0.3125rem;
         }
     }
 }

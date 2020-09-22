@@ -2,7 +2,7 @@
     <div class="experience-container">
         <h1 class="subheader">EXPERIENCE</h1>
         <div class="experience">
-            <div v-for="(experience, i) in data" :key="i">
+            <div class="column" v-for="(experience, i) in data" :key="i">
                 <div class="role">
                     <div class="company">
                         <h2 class="title">{{ experience.role.title }}</h2>
@@ -14,7 +14,6 @@
                     </div>
                 </div>
                 <ul class="bullets">
-                    <!-- <li v-for="(point, j) in points[i]" :key="j" v-html="point" /> -->
                     <li
                         v-for="(bullet, j) in experience.bullets"
                         :key="j"
@@ -46,11 +45,11 @@ export default {
     background-color: white;
     h1 {
         font-weight: normal;
-        font-size: 14pt;
+        font-size: $subheader-font-size;
         color: $highlight;
     }
     div {
-        font-size: 7pt;
+        font-size: $content-font-size;
         h2 {
             .title .date {
                 font-weight: normal;
@@ -59,13 +58,9 @@ export default {
     }
 }
 
-.content {
-    display: flex;
-    flex-direction: row;
-}
 .role {
     display: flex;
-    flex-direction: row;
+    /* flex-direction: row; */
     justify-content: space-between;
 
     .company {
@@ -76,6 +71,5 @@ export default {
         display: flex;
         flex-direction: column;
     }
-    /* width: (100vw - 300px */
 }
 </style>

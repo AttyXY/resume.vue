@@ -1,6 +1,6 @@
 <template>
     <div class="resume">
-        <ResumeHeader v-bind="headerData" />
+        <Header v-bind="headerData" />
         <div class="content">
             <Experience :data="experienceData" />
             <Sidebar :data="sidebarData" />
@@ -27,11 +27,11 @@ export default {
             return this.data.experience;
         },
         sidebarData: function() {
-            return this.data.sidebar;
+            return this.data.sideba;
         },
     },
     components: {
-        ResumeHeader: Header,
+        Header: Header,
         Experience,
         Sidebar,
     },
@@ -39,9 +39,8 @@ export default {
 </script>
 
 <style lang="scss">
-/* Global layout grid */
 .resume {
-    // set to Letter paper size
+    // Letter paper size
     width: 8.5in;
     height: 11in;
 
@@ -50,9 +49,7 @@ export default {
 }
 
 .resume-header {
-    height: 12.5vh; // 1/8 height
     flex: 0 1 auto;
-
     display: flex;
     flex-direction: row;
 }
@@ -61,17 +58,22 @@ export default {
     display: flex;
     flex-direction: row;
 
-    height: calc(100vh - 12.5vh);
     flex: 1;
     & .subheader {
-        border-bottom: 1.5px solid black;
+        border-bottom: 0.001rem solid black;
     }
 }
 
-.experience-container {
-    width: calc(100vw - 300px);
+.column {
+    padding-top: 0.4rem;
+    padding-bottom: 0.4rem;
 }
+
+.experience-container {
+    width: 6in;
+}
+
 .sidebar-container {
-    width: 300px;
+    width: calc(8.5in - 6in);
 }
 </style>

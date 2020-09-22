@@ -2,7 +2,7 @@
     "header": {
         "about": {
             "name": "Atticus Yang",
-            "blurb": "smol boi big dicc"
+            "blurb": "NA"
         },
         "contacts": [
             {
@@ -49,7 +49,7 @@
                 "location": "Toronto, ON"
             },
             "bullets": [
-                "Improved top vehicle loss detection model, saving 2M+ annually on Ontario risk sharing pool (dask, scikit-learn, seaborn)",
+                "Improved top vehicle loss detection model, saving __2M+ annually__ (dask, scikit-learn, seaborn)",
                 "Collected, cleaned, and analyzed internal company and census data to build proof-of-concept fraud detection model (tidyverse, ggplot2)",
                 "Automated and migrated deployment and monitoring of property fire risk assessment model to new internal cloud environment (PySpark)",
                 "Co-hosted intro to machine learning think tank with internal and external business stakeholders to generate buy-in and new project proposals"
@@ -70,31 +70,53 @@
             ]
         }
     ],
-    "sidebar": {
+    "sideba": {
         "skills": {
-            "languages": ["Python", "R", "SQL", "Bash"],
-            "libraries": ["react.js", "vue.js"],
-            "technologies": ["AWS", "GCP"]
+            "languages": [
+                "Python",
+                "R",
+                "Scala",
+                "SQL",
+                "Bash",
+                "C++",
+                "C",
+                "Javascript",
+                "HTML",
+                "CSS"
+            ],
+            "libraries": [
+                "React",
+                "Vue",
+                "numpy",
+                "pandas/dask",
+                "matplotlib/seaborn",
+                "PyGLM",
+                "scikit-learn",
+                "xgboost",
+                "PyTorch",
+                "Tensorflow",
+                "spaCy",
+                "gensim",
+                "PySpark",
+                "beautifulsoup/gazpacho"
+            ],
+            "technologies": [
+                "AWS",
+                "GCP",
+                "Docker",
+                "Terraform",
+                "Serverless Framework",
+                "Postman",
+                "Swagger",
+                "Git/SVN",
+                "Sketch/Figma"
+            ]
         },
-        "projects": [
-            {
-                "name": "bedbugs-begone",
-                "url": "github.com/attyxy/bedbugs-begone",
-                "blurb": "bedbug or not?"
-            },
-            {
-                "name": "personal-site",
-                "url": "github.com/attyxy/attyxy.github.io",
-                "blurb": "self-explanatory"
-            }
-        ],
-        "education": [
-            {
-                "degree": "Bachelor of Compouter Science",
-                "institution": "University of Waterloo",
-                "year": "2017 - 2022",
-                "extras": ["Cognitive Science Minor"]
-            }
-        ]
+        "education": {
+            "degree": "Bachelor of Computer Science",
+            "institution": "University of Waterloo",
+            "year": "2017 -> 2022",
+            "minor": "Cognitive Science Minor"
+        }
     }
 }
